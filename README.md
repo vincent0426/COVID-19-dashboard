@@ -1,3 +1,9 @@
 # COVID-19-dashboard
 a dashboard for covid using python
-![image](https://github.com/Vincent0426/COVID-19-dashboard/blob/master/Image%202021-1-24%20at%208.55%20PM.jpeg)
+<h2>Home Page</h2>
+
+![image](https://github.com/Vincent0426/COVID-19-dashboard/blob/master/image/home_page_Image.jpeg)
+
+<h2>Second Page</h2>
+
+![image](https://github.com/Vincent0426/COVID-19-dashboard/blob/master/image/second_page_image.png)
