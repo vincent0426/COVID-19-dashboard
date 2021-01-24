@@ -11,12 +11,12 @@ def enable_download_headless(browser,download_dir):
 # change the <path_to_download_default_directory> to whatever your default download folder is located
 
 # initialize driver object and change the <path_to_chrome_driver> depending on your directory where your chromedriver should be
-driver = webdriver.Chrome(executable_path="/Users/vincenthsieh/Downloads/chromedriver")
+driver = webdriver.Chrome(executable_path="/Users/vincenthsieh/COVID-19-dashboard/chromedriver")
 
 # change the <path_to_place_downloaded_file> to your directory where you would like to place the downloaded file
 
 # function to handle setting up headless download
-download_dir = "/Users/vincenthsieh/Desktop/COVID-19-dashboard"
+download_dir = "/Users/vincenthsieh/COVID-19-dashboard"
 
 # function to handle setting up headless download
 enable_download_headless(driver, download_dir)
