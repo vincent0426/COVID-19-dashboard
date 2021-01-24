@@ -16,7 +16,7 @@ driver = webdriver.Chrome(executable_path="/Users/vincenthsieh/Downloads/chromed
 # change the <path_to_place_downloaded_file> to your directory where you would like to place the downloaded file
 
 # function to handle setting up headless download
-download_dir = "/Users/vincenthsieh/covid_dash"
+download_dir = "/Users/vincenthsieh/Desktop/COVID-19-dashboard"
 
 # function to handle setting up headless download
 enable_download_headless(driver, download_dir)

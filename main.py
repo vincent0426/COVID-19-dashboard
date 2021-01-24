@@ -141,7 +141,7 @@ def title(value):
               dash.dependencies.Output('page-2-content', component_property='figure'),
               [dash.dependencies.Input('page-1-dropdown', component_property='value')])
 def page_1_dropdown(value):
-    with open("國家經緯度.csv") as ln:
+    with open("Country lon and lat.csv") as ln:
         for line in ln:
             line = line.split(",")
             if(line[3].strip() in value):
