@@ -90,28 +90,28 @@ page_1_layout = html.Div([
     ),
     dcc.Link('Go back to home', href='/',style={"float":"right", "marginRight":50},),
     dcc.Dropdown(
-        id='page-1-dropdown',
+        id='second_page_dropdown',
         options=[{'label': i, 'value': i} for i in countryDrop],
         value='United States of America',
         style={"width": 250, "marginTop":".5%"},
     ),
     html.Div(
-        dcc.Graph(id='page1-map',
+        dcc.Graph(id='second_page_map',
         style={"width": "50%", "float" : "left"},
         )
     ),    
     html.Div(
-        dcc.Graph(id='pie',
+        dcc.Graph(id='second_page_pie',
         style={"width": "50%", "float" : "right"},
         )
     ),
     html.Div(
-        dcc.Graph(id='page-1-content',
+        dcc.Graph(id='second_page_new_line',
         style={"width": "50%", "float" : "left"},
         )
     ),
     html.Div(
-        dcc.Graph(id='page-2-content',
+        dcc.Graph(id="second_page_death_line",
         style={"width": "50%", "float" : "right"},
         )
     ),
@@ -121,7 +121,7 @@ page_1_layout = html.Div([
               dash.dependencies.Output('newCases', component_property='children'),
               dash.dependencies.Output('DeathCases', component_property='children'),
               dash.dependencies.Output('percent', component_property='children'),
-              [dash.dependencies.Input('page-1-dropdown', component_property='value')])
+              [dash.dependencies.Input('second_page_dropdown', component_property='value')])
 def title(value):
     with open("output.csv") as each:
         for line in each:
@@ -135,11 +135,11 @@ def title(value):
     return "{:,}".format(totalCases), "{:,}".format(newCases), "{:,}".format(newDeath), "{:.2f}%".format((totalDeath / totalCases)*100)
 
 
-@app.callback(dash.dependencies.Output('page1-map', component_property='figure'),
-              dash.dependencies.Output('pie', component_property='figure'),
-              dash.dependencies.Output('page-1-content', component_property='figure'),
-              dash.dependencies.Output('page-2-content', component_property='figure'),
-              [dash.dependencies.Input('page-1-dropdown', component_property='value')])
+@app.callback(dash.dependencies.Output('second_page_map', component_property='figure'),
+              dash.dependencies.Output('second_page_pie', component_property='figure'),
+              dash.dependencies.Output('second_page_new_line', component_property='figure'),
+              dash.dependencies.Output('second_page_death_line', component_property='figure'),
+              [dash.dependencies.Input('second_page_dropdown', component_property='value')])
 def page_1_dropdown(value):
     with open("Country lon and lat.csv") as ln:
         for line in ln:
