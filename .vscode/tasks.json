@@ -1,0 +1,37 @@
+{
+
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+
+    // for the documentation about the tasks.json format
+
+    "version": "2.0.0",
+
+    "tasks": [
+
+        {
+
+            "label": "Run Python Code",
+
+            "type": "process",
+
+            "command": "/Library/Frameworks/Python.framework/Versions/3.9/bin/python3",
+
+            "args": [
+
+                "${file}"
+
+            ],
+
+            "group": {
+
+                "kind": "build",
+
+                "isDefault": true
+
+            }
+
+        }
+
+    ]
+
+}
